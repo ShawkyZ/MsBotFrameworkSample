@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Connector;
-using TestBot.Models;
+using TestBot.Dialogs;
 
-namespace TestBot
+namespace TestBot.Controllers
 {
     [BotAuthentication]
     public class MessagesController : ApiController
@@ -21,12 +21,7 @@ namespace TestBot
         {
             if (activity.Type == ActivityTypes.Message)
             {
-                var message = activity.Text;
-                var connector = new ConnectorClient(new Uri(activity.ServiceUrl));
-                var sentimentResponse = await TextAnalyzeHelper.Analyze(message);
-                var replyMessage = CreateReplyMessage(sentimentResponse.Documents.First().Score);
-                var replyActivity = activity.CreateReply($"{replyMessage}");
-                await connector.Conversations.ReplyToActivityAsync(replyActivity);
+                await Conversation.SendAsync(activity, () => new WeatherDialog());
             }
             else
             {
@@ -35,14 +30,6 @@ namespace TestBot
             var response = Request.CreateResponse(HttpStatusCode.OK);
             return response;
         }
-
-        private string CreateReplyMessage(double sentimentScore)
-        {
-            if (sentimentScore > 0.8)
-                return "Glad to serve!";
-            return sentimentScore < 0.3 ? "We're sorry" : "Alright";
-        }
-
         private Activity HandleSystemMessage(Activity message)
         {
             if (message.Type == ActivityTypes.DeleteUserData)

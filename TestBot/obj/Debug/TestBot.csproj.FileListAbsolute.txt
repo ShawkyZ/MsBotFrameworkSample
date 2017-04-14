@@ -43,3 +43,50 @@ c:\users\thewh\documents\visual studio 2015\Projects\TestBot\TestBot\bin\ru\Micr
 c:\users\thewh\documents\visual studio 2015\Projects\TestBot\TestBot\bin\zh-hans\Microsoft.Bot.Builder.resources.dll
 c:\users\thewh\documents\visual studio 2015\Projects\TestBot\TestBot\obj\Debug\Bot Application.dll
 c:\users\thewh\documents\visual studio 2015\Projects\TestBot\TestBot\obj\Debug\Bot Application.pdb
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Bot Application.dll.config
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Bot Application.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Bot Application.pdb
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Autofac.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Chronic.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Microsoft.Azure.AppService.ApiApps.Service.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Microsoft.Bot.Builder.Autofac.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Microsoft.Bot.Builder.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Microsoft.Bot.Connector.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Microsoft.Cognitive.LUIS.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Microsoft.IdentityModel.Protocol.Extensions.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Microsoft.Rest.ClientRuntime.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Microsoft.WindowsAzure.Configuration.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Newtonsoft.Json.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Swashbuckle.Core.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\System.Net.Http.Formatting.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\System.Web.Http.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\System.Web.Http.WebHost.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\WebActivatorEx.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Autofac.xml
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Microsoft.Bot.Builder.xml
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Microsoft.Bot.Builder.Autofac.xml
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Microsoft.Bot.Connector.xml
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Microsoft.IdentityModel.Protocol.Extensions.pdb
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Microsoft.IdentityModel.Protocol.Extensions.xml
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Microsoft.WindowsAzure.Configuration.xml
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Newtonsoft.Json.xml
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\System.IdentityModel.Tokens.Jwt.pdb
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\System.Net.Http.Formatting.xml
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\System.Web.Http.xml
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\System.Web.Http.WebHost.xml
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\ar\Microsoft.Bot.Builder.resources.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\cs\Microsoft.Bot.Builder.resources.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\de-dE\Microsoft.Bot.Builder.resources.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\en\Microsoft.Bot.Builder.resources.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\es\Microsoft.Bot.Builder.resources.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\fa\Microsoft.Bot.Builder.resources.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\fr\Microsoft.Bot.Builder.resources.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\ja\Microsoft.Bot.Builder.resources.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\ru\Microsoft.Bot.Builder.resources.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\zh-hans\Microsoft.Bot.Builder.resources.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\obj\Debug\Bot Application.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\obj\Debug\Bot Application.pdb
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\obj\Debug\TestBot.csprojResolveAssemblyReference.cache
