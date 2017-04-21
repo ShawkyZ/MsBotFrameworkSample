@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Builder.Luis;
 using Microsoft.Bot.Builder.Luis.Models;
+using Microsoft.Bot.Connector;
+using Microsoft.IdentityModel.Protocols;
 using TestBot.Helpers;
 
 namespace TestBot.Dialogs
@@ -14,8 +16,6 @@ namespace TestBot.Dialogs
     [Serializable]
     public class WeatherDialog:LuisDialog<object>
     {
-        EntityRecommendation date;
-
         [LuisIntent("")]
         public async Task None(IDialogContext context, LuisResult result)
         {
@@ -36,46 +36,51 @@ namespace TestBot.Dialogs
                 PromptDialog.Text(context,
                                     SelectCity, 
                                     "In which city do you want to know the weather forecast?");
-                
             }
+            else
+            {
+                context.UserData.SetValue("Location", location.Entity);
+            }
+            EntityRecommendation date;
             if (!result.TryFindEntity("builtin.datetime.date", out date) && !result.TryFindEntity("$datetime", out date))
             {
                 date = new EntityRecommendation {Type = "builtin.datetime.date", Resolution = new Dictionary<string, string> { { "date", DateTime.Now.ToShortDateString().Replace(".","-") } } };
             }
-            if(location != null)
-            await GetWeatherForecast(context, location, date, result);
+            context.UserData.SetValue("Date", date.Resolution.FirstOrDefault().Value);
+            if (location != null)
+            await GetWeatherForecast(context, result);
         }
 
-        private async Task GetWeatherForecast(IDialogContext context, EntityRecommendation location, EntityRecommendation date, LuisResult result = null)
+        private async Task GetWeatherForecast(IDialogContext context, LuisResult result = null)
         {
-            if (location == null || date == null)
-            {
-                await context.PostAsync("Error!");
-                return;
-            }
-            var luisDateString = BotFrameworkHelper.ParseLuisDateString(date.Resolution.First().Value);
+            context.UserData.TryGetValue("Date", out string date);
+            context.UserData.TryGetValue("Location", out string location);
+            var luisDateString = BotFrameworkHelper.ParseLuisDateString(date);
             if (luisDateString == null) return;
-            var weatherResult = OpenWeatherApiHelper.GetWeatherBatchResult(location.Entity, 0)
+            var weatherResult = OpenWeatherApiHelper.GetWeatherBatchResult(location, 0)
                 .OpenWeatherResult.FirstOrDefault(x => DateTime.Parse(x.DateText).Month == luisDateString.Value.Month && DateTime.Parse(x.DateText).Day == luisDateString.Value.Day);
             if (weatherResult == null)
             {
                 await context.PostAsync("Sorry, I can't retrieve weather data for more than 5 days from now.!");
                 return;
             }
-
-            if(result != null && result.TryFindEntity("WeatherState::Rainy",out EntityRecommendation state) && weatherResult.OpenWeatherWeatherStateResultList.First().MainState.ToLower().Contains("rain"))
-                await context.PostAsync($"The weather in {location.Entity} on {luisDateString.Value.ToShortDateString()} is {weatherResult.OpenWeatherMainResult.Temprature}C and {weatherResult.OpenWeatherWeatherStateResultList.First().MainState} and Yes you should get a {state.Entity}");
-            else
-                await context.PostAsync($"The weather in {location.Entity} on {luisDateString.Value.ToShortDateString()} is {weatherResult.OpenWeatherMainResult.Temprature}C and {weatherResult.OpenWeatherWeatherStateResultList.First().MainState}");
-
+            var replyMessage = string.Empty;
+            var hasRainEntity = result.TryFindEntity("WeatherState::Rainy", out EntityRecommendation weatherStateEntity);
+            var isRainy = weatherResult.OpenWeatherWeatherStateResultList.First().MainState.ToLower().Contains("rain");
+            if (hasRainEntity && isRainy)
+                replyMessage += $"Yes, you should get a {weatherStateEntity.Entity} ";
+            else if(hasRainEntity)
+                replyMessage += $"No, you shouldn't get a {weatherStateEntity.Entity} ";
+            replyMessage += $"The weather in {location} on {luisDateString.Value.ToShortDateString()} is {weatherResult.OpenWeatherMainResult.Temprature}C and {weatherResult.OpenWeatherWeatherStateResultList.First().MainState}";
+            await context.PostAsync(replyMessage);
             context.Wait(MessageReceived);
         }
         
         private async Task SelectCity(IDialogContext context, IAwaitable<string> result)
         {
             var location = await result;
-            var entityLocation = new EntityRecommendation { Type = "builtin.geography.city", Entity = location };
-            await GetWeatherForecast(context, entityLocation, date);
+            context.UserData.SetValue("Location", location);
+            await GetWeatherForecast(context);
         }
     }
 }

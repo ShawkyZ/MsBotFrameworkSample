@@ -15,7 +15,6 @@ namespace TestBot.Dialogs
 
         private async Task MessageReceivedAsync(IDialogContext context, IAwaitable<object> result)
         {
-            
             var activity = await result as Activity;
             var sentimentResponse = await TextAnalyzeHelper.Analyze(activity?.Text);
             var replyMessage = CreateReplyMessage(sentimentResponse.Documents.First().Score);

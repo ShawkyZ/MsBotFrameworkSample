@@ -142,6 +142,7 @@
     </Compile>
     <Compile Include="Helpers\OpenWeatherApiHelper.cs" />
     <Compile Include="Models\DocumentResponse.cs" />
+    <Compile Include="Models\Feedback.cs" />
     <Compile Include="Models\SentimentResponse.cs" />
     <Compile Include="Models\SentimentRequest.cs" />
     <Compile Include="Models\DocumentRequest.cs" />
