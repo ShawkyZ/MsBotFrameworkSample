@@ -136,7 +136,7 @@
     <Compile Include="BotFrameworkHelper.cs" />
     <Compile Include="Controllers\MessagesController.cs" />
     <Compile Include="Dialogs\SentimentDialog.cs" />
-    <Compile Include="Dialogs\WeatherDialog.cs" />
+    <Compile Include="Dialogs\LUISDialog.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

@@ -14,7 +14,8 @@ namespace TestBot.Dialogs
 {
     [LuisModel("a2b9a642-5c7e-49a1-bfc2-b4cb07cb4fbe", "d51d2236e9a047b1bf07b83050b285b4")]
     [Serializable]
-    public class WeatherDialog:LuisDialog<object>
+    // ReSharper disable once InconsistentNaming
+    public class LUISDialog:LuisDialog<object>
     {
         [LuisIntent("")]
         public async Task None(IDialogContext context, LuisResult result)
