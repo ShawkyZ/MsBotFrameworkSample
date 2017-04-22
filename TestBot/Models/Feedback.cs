@@ -1,20 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using Microsoft.Bot.Builder.FormFlow;
 
 namespace TestBot.Models
 {
-    public enum State
-    {
-        Happy,
-        Sad
-    }
     [Serializable]
     public class Feedback
     {
-        public State state { get; set; }
+        [Numeric(1, 5)]
+        [Describe("Rate your experience with us from 1-5")]
+        public int StarsNumber { get; set; }
+        [Optional]
+        [Describe("Wanna send us a message?")]
         public string AdditionalMessage { get; set; }
         public static IForm<Feedback> BuildForm()
         {

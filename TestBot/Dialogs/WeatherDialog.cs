@@ -4,11 +4,11 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Bot.Builder.Dialogs;
+using Microsoft.Bot.Builder.FormFlow;
 using Microsoft.Bot.Builder.Luis;
 using Microsoft.Bot.Builder.Luis.Models;
-using Microsoft.Bot.Connector;
-using Microsoft.IdentityModel.Protocols;
 using TestBot.Helpers;
+using TestBot.Models;
 
 namespace TestBot.Dialogs
 {
@@ -49,6 +49,17 @@ namespace TestBot.Dialogs
             context.UserData.SetValue("Date", date.Resolution.FirstOrDefault().Value);
             if (location != null)
             await GetWeatherForecast(context, result);
+        }
+        [LuisIntent("GetFeedback")]
+        public async Task GetFeedback(IDialogContext context, LuisResult result)
+        {
+            context.Call(new FormDialog<Feedback>(new Feedback(), Feedback.BuildForm,
+                FormOptions.PromptInStart), Resume);
+        }
+
+        private async Task Resume(IDialogContext context, IAwaitable<Feedback> result)
+        {
+            await context.PostAsync("Thank you.");
         }
 
         private async Task GetWeatherForecast(IDialogContext context, LuisResult result = null)
