@@ -47,6 +47,7 @@ C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Bot Application
 C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Bot Application.dll
 C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Bot Application.pdb
 C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Autofac.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\BestMatchDialog.dll
 C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Chronic.dll
 C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Microsoft.Azure.AppService.ApiApps.Service.dll
 C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Microsoft.Bot.Builder.Autofac.dll
@@ -90,3 +91,6 @@ C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\zh-hans\Microso
 C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\obj\Debug\Bot Application.dll
 C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\obj\Debug\Bot Application.pdb
 C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\obj\Debug\TestBot.csprojResolveAssemblyReference.cache
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\HtmlAgilityPack.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\HtmlAgilityPack.pdb
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\HtmlAgilityPack.xml

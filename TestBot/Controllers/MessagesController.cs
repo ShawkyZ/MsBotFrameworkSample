@@ -21,7 +21,7 @@ namespace TestBot.Controllers
         {
             if (activity.Type == ActivityTypes.Message)
             {
-                await Conversation.SendAsync(activity, () => new LUISDialog());
+                await Conversation.SendAsync(activity, () => new RootDialog());
             }
             else
             {
