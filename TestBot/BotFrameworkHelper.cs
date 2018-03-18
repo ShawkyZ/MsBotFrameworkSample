@@ -178,7 +178,7 @@ namespace TestBot
                     switch (entity.Resolution.First().Key)
                     {
                         case "date":
-                            var dateTimeParts = entity.Resolution.First().Value.Split('T');
+                            var dateTimeParts = entity.Resolution.First().Value.ToString().Split('T');
                             date = ParseLuisDateString(dateTimeParts[0]);
 
                             if (date.HasValue)

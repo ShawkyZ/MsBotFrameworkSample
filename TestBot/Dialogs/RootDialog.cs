@@ -14,7 +14,7 @@ using TestBot.Models.WeatherAPI;
 
 namespace TestBot.Dialogs
 {
-    [LuisModel("a2b9a642-5c7e-49a1-bfc2-b4cb07cb4fbe", "d51d2236e9a047b1bf07b83050b285b4")]
+    [LuisModel("", "")]
     [Serializable]
     // ReSharper disable once InconsistentNaming
     public class RootDialog:LuisDialog<object>
@@ -49,7 +49,7 @@ namespace TestBot.Dialogs
             EntityRecommendation date;
             if (!result.TryFindEntity("builtin.datetime.date", out date) && !result.TryFindEntity("$datetime", out date))
             {
-                date = new EntityRecommendation {Type = "builtin.datetime.date", Resolution = new Dictionary<string, string> { { "date", DateTime.Now.ToShortDateString().Replace(".","-") } } };
+                date = new EntityRecommendation {Type = "builtin.datetime.date", Resolution = new Dictionary<string, object> { { "date", DateTime.Now.ToShortDateString().Replace(".","-") } } };
             }
             context.UserData.SetValue("Date", date.Resolution.FirstOrDefault().Value);
             if (location != null)

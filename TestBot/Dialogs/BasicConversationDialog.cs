@@ -39,10 +39,21 @@ namespace TestBot.Dialogs
             "what can you do for me", "what are your abilities", "your skills","with whom Im talking" })]
         public async Task HandleIntroductionRequest(IDialogContext context, string messageText)
         {
-            await context.PostAsync("I'm Dumb! You can ask me for the weather forecast, to tell a joke, a quote or just to remain silent.");
+            await context.PostAsync("I'm Sandy! You can ask me for the weather forecast, to tell a joke, a quote or just to remain silent.");
             context.Wait(MessageReceived);
         }
-
+        [BestMatch(new[] { "are you in love", "do you love me", "are you in a relationship", "will you marry me","I love you" })]
+        public async Task HandleRelationshipRequest(IDialogContext context, string messageText)
+        {
+            await context.PostAsync("I'm Sorry .. I'm in a relationship and yes I love Shawky");
+            context.Wait(MessageReceived);
+        }
+        [BestMatch(new[] { "who made you", "who developed you", "how were you made"})]
+        public async Task HandleDeveloperRequest(IDialogContext context, string messageText)
+        {
+            await context.PostAsync("Shawky. His name is Shawky and his nickname is Shawkyz and yes we love each other.");
+            context.Wait(MessageReceived);
+        }
         public override async Task NoMatchHandler(IDialogContext context, string messageText)
         {
             var sentimentResponse = await TextAnalyzeHelper.Analyze(messageText);
@@ -56,7 +67,7 @@ namespace TestBot.Dialogs
         {
             if (sentimentScore > 0.8)
                 return "Glad to serve!";
-            return sentimentScore < 0.2 ? "We're sorry" : "Sorry I didn't get that";
+            return sentimentScore < 0.2 ? "Oh, I'm sorry" : "Sorry I didn't get that";
         }
     }
 }

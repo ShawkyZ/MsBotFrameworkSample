@@ -69,11 +69,9 @@ C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Autofac.xml
 C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Microsoft.Bot.Builder.xml
 C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Microsoft.Bot.Builder.Autofac.xml
 C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Microsoft.Bot.Connector.xml
-C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Microsoft.IdentityModel.Protocol.Extensions.pdb
 C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Microsoft.IdentityModel.Protocol.Extensions.xml
 C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Microsoft.WindowsAzure.Configuration.xml
 C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Newtonsoft.Json.xml
-C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\System.IdentityModel.Tokens.Jwt.pdb
 C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\System.IdentityModel.Tokens.Jwt.xml
 C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\System.Net.Http.Formatting.xml
 C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\System.Web.Http.xml
@@ -90,7 +88,20 @@ C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\ru\Microsoft.Bo
 C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\zh-hans\Microsoft.Bot.Builder.resources.dll
 C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\obj\Debug\Bot Application.dll
 C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\obj\Debug\Bot Application.pdb
-C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\obj\Debug\TestBot.csprojResolveAssemblyReference.cache
 C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\HtmlAgilityPack.dll
 C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\HtmlAgilityPack.pdb
 C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\HtmlAgilityPack.xml
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\obj\Debug\TestBot.csproj.CoreCompileInputs.cache
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Microsoft.IdentityModel.Logging.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Microsoft.IdentityModel.Protocols.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Microsoft.IdentityModel.Logging.xml
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Microsoft.IdentityModel.Protocols.xml
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\Microsoft.Rest.ClientRuntime.xml
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\it\Microsoft.Bot.Builder.resources.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\nl\Microsoft.Bot.Builder.resources.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\bin\pt-BR\Microsoft.Bot.Builder.resources.dll
+C:\Users\thewh\Documents\GitHub\MsBotFrameworkSample\TestBot\obj\Debug\TestBot.csprojResolveAssemblyReference.cache
