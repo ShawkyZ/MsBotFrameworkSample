@@ -14,7 +14,7 @@ using TestBot.Models.WeatherAPI;
 
 namespace TestBot.Dialogs
 {
-    [LuisModel("", "")]
+    [LuisModel("a2b9a642-5c7e-49a1-bfc2-b4cb07cb4fbe", "d51d2236e9a047b1bf07b83050b285b4")]
     [Serializable]
     // ReSharper disable once InconsistentNaming
     public class RootDialog:LuisDialog<object>
